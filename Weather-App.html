@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="Styles/main.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid" id="background-div">
+      <div class="d-flex align-items-center flex-column" id="input-div">
+        <p id="home-paragraph" class="text-center text-light text-size mt-5">
+          Greeting! Welcome to our weather website. <br />
+          Please note that we have made some updates to our display format to
+          provide you with the most relevant and concise information for your
+          day. <br />
+          You can read today's hourly weather report here. Note that it's not
+          actually every hour, but every 3 hours!
+        </p>
+        <div class="input-group mb-3 w-25 mt-5" id="search-div">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control text-light"
+            placeholder="Search for City"
+          />
+          <button class="btn btn-light" id="searchButton">
+            <i class="text-light fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="button-temperature"
+        class="d-flex justify-content-center mt-5 d-none"
+      >
+        <button
+          id="btn-celsius"
+          class="btn bord-white color-inherit text-light me-2"
+        >
+          <img src="Images/Icons/celsius.png" />
+        </button>
+        <button
+          id="btn-fahrenheit"
+          class="btn bord-white color-inherit text-light ms-2"
+        >
+          <img src="Images/Icons/fahrenheit.png" />
+        </button>
+      </div>
+      <div class="d-flex" id="main-div"></div>
+      <div class="mt-3 margin-top-on-1441px">
+        <p class="text-light ms-2" id="card-paragraph">Rest of the day:</p>
+        <div
+          class="d-flex flex-wrap-sm align-items-center-sm justify-content-center"
+          id="card-div"
+        ></div>
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <div id="spinner" class="spinner-grow text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Scripts/main.js"></script>
+  </body>
+</html>
